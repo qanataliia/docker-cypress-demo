@@ -7,7 +7,7 @@ import { faker } from "@faker-js/faker";
 
 describe("Email validation", () => {
   it("Displays an error message for an invalid email", () => {
-    cy.visit("/app/ui/signup/business");
+    cy.visit("https://dev.capitalise.com/app/ui/signup/business");
     cy.get(elementsGeneral.emailField)
       .should("be.empty")
       .type(faker.random.alpha());

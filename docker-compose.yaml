@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  platfi-test-learn:
+    image: platfi-test-learn:v2
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+  business:
+    image: platfi-test-learn:latest
+    environment:
+      - SPEC=business
+  introducer:
+    image: platfi-test-learn:latest
+    environment:
+      - SPEC=introducer
+  lender:
+    image: platfi-test-learn:latest
+    environment:
+      - SPEC=lender
+  mobile:
+    image: platfi-test-learn:latest
+    environment:
+      - SPEC=mobile
+  test:
+    image: platfi-test-learn:v2
+    platform: linux/amd64

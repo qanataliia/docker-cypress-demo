@@ -1,0 +1,58 @@
+{
+    "name": "cypress.poc",
+    "version": "1.0.0",
+    "description": "POC cypress e2e",
+    "main": "index.js",
+    "engines": {
+      "node": ">=14"
+    },
+    "scripts": {
+      "docker":"docker compose build && docker compose run test",
+      "cypress:open": "yarn cypress:open",
+      " --- LINT SCRIPTS ---- ": "",
+      "eslint:fix": "yarn eslint --fix",
+      "lint": "yarn eslint && yarn prettier:check",
+      "lint:fix": "yarn eslint:fix && yarn prettier:fix",
+      "prettier:cli": "prettier \"**/*.js\"",
+      "prettier:check": "yarn prettier:cli --check",
+      "prettier:fix": "yarn prettier:cli --write",
+      " --- GENERAL EXECUTION SCRIPTS ---- ": "",
+      "start": "yarn cypress:open",
+      "test": "yarn cypress run --browser chrome",
+      "test:headless": "yarn test --headless",
+      " --- BROWSERS SCRIPTS ---- ": "",
+      "test:chrome": "yarn cypress run --browser chrome",
+      "test:firefox": "yarn cypress run --browser firefox",
+      "test:edge": "yarn cypress run --browser edge"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@faker-js/faker": "^7.6.0",
+      "@testing-library/cypress": "^9.0.0",
+      "cosmiconfig": "^6.0.0",
+      "cy-verify-downloads": "^0.1.11",
+      "cypress": "^12.5.1",
+      "cypress-file-upload": "^5.0.8",
+      "cypress-log-to-output": "^1.1.2",
+      "cypress-multi-reporters": "^1.6.2",
+      "cypress-promise": "^1.1.0",
+      "cypress-slack-reporter": "^1.5.2",
+      "cypress-xpath": "^2.0.1",
+      "dayjs": "^1.11.7",
+      "lodash": "^4.2.1",
+      "mocha": "^8.1.0"
+    },
+    "devDependencies": {
+      "eslint": "^8.11.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-cypress": "^2.12.1",
+      "eslint-plugin-import": "^2.25.4",
+      "husky": "^3.1.0",
+      "mocha-junit-reporter": "^2.2.0",
+      "mochawesome": "^6.1.1",
+      "mochawesome-merge": "^4.1.0",
+      "prettier": "2.6.0"
+    }
+  }
+  
