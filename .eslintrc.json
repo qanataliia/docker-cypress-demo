@@ -1,0 +1,20 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "cypress",
+      "import"
+    ],
+    "env": {
+      "cypress/globals": true,
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2022
+    }
+  }
+  

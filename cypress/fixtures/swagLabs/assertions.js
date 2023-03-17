@@ -1,3 +1,5 @@
+import { selectors } from "./selectors";
+
 export const validateUserIsLoggedIn = () => {
   cy.get(selectors.hamburgerMenu).should("be.visible");
   cy.url().should("include", "/inventory.html");

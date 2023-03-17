@@ -1,1 +1,1 @@
-export * from './swagLabs';
+export * from "./swagLabs";
